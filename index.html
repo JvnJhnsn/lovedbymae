@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Jastip Hong Kong ke Indonesia oleh lovedbymae. 100% original, beli langsung di HK.">
+<title>lovedbymae. Jastip HK</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Jost:wght@400;500;600&display=swap">
+<style>
+/* Layout: one narrow column like a gift card, a "batch ticket" up top, then menu → how-to → HK notes → FAQ. */
+:root {
+  --paper: #f5efe8;
+  --card: #fffdfa;
+  --cocoa: #4a332b;
+  --ink: #2e211c;
+  --muted: #8a7468;
+  --rose: #b58a76;
+  --line: #e6dbd0;
+  --hk: #b3263a;
+  --display: "Playfair Display", Georgia, "Times New Roman", serif;
+  --body: "Jost", "Segoe UI", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #1c1513; --card: #261d1a; --cocoa: #e9d3c4; --ink: #f1e6dd;
+    --muted: #b29c8f; --rose: #d3a891; --line: #3a2d28; --hk: #e4566a; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #1c1513; --card: #261d1a; --cocoa: #e9d3c4; --ink: #f1e6dd;
+  --muted: #b29c8f; --rose: #d3a891; --line: #3a2d28; --hk: #e4566a; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--paper); color: var(--ink);
+  font: 400 16px/1.6 var(--body);
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.wrap { max-width: 760px; margin: 0 auto; padding-block: 2.5rem 4rem; display: grid; gap: 4rem; }
+h1, h2, h3 { font-family: var(--display); font-weight: 400; margin: 0; text-wrap: balance; color: var(--ink); }
+h2 { font-size: clamp(1.8rem, 5vw, 2.4rem); }
+h3 { font-size: 1.3rem; }
+p { margin: 0; }
+.eyebrow { font: 500 .75rem/1 var(--body); letter-spacing: .22em; text-transform: uppercase; color: var(--rose); }
+.handle { font: 400 .9rem var(--body); letter-spacing: .12em; color: var(--muted); }
+.rule { width: 56px; height: 1px; background: var(--rose); border: 0; margin: 0; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--rose); outline-offset: 3px; }
+
+/* Header */
+header { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
+.logo { font-family: var(--display); font-size: 1.5rem; font-style: italic; text-decoration: none; }
+nav { display: flex; gap: 1.25rem; flex-wrap: wrap; font-size: .9rem; }
+nav a { text-decoration: none; color: var(--muted); }
+nav a:hover { color: var(--ink); }
+
+/* Hero */
+.hero { display: grid; gap: 1.25rem; justify-items: center; text-align: center; padding-top: 1rem; }
+.hero h1 { font-size: clamp(2.6rem, 9vw, 4.4rem); line-height: 1.05; }
+.hero h1 em { color: var(--rose); }
+.hero p.lede { max-width: 34ch; color: var(--muted); font-size: 1.05rem; }
+.trust { font: 500 .78rem var(--body); letter-spacing: .18em; text-transform: uppercase; color: var(--ink); display: flex; flex-wrap: wrap; justify-content: center; gap: .4rem 1rem; }
+.trust span + span::before { content: "·"; margin-right: 1rem; color: var(--rose); }
+.btns { display: flex; gap: .75rem; flex-wrap: wrap; justify-content: center; }
+.btn { display: inline-flex; align-items: center; gap: .5rem; padding: .8rem 1.4rem; border-radius: 999px; font: 500 .95rem var(--body); text-decoration: none; border: 1px solid var(--cocoa); cursor: pointer; }
+.btn.solid { background: var(--cocoa); color: var(--paper); }
+.btn.ghost { background: transparent; color: var(--cocoa); }
+.btn:hover { opacity: .88; }
+
+/* Batch ticket */
+.ticket { background: var(--card); border: 1px solid var(--line); border-radius: 20px; display: grid; grid-template-columns: 1fr auto; overflow: hidden; }
+.ticket .main { padding: 1.5rem 1.75rem; display: grid; gap: .5rem; min-width: 0; }
+.ticket .stub { border-left: 2px dashed var(--line); padding: 1.5rem 1.75rem; display: grid; place-content: center; text-align: center; gap: .15rem; }
+.stub .day { font-family: var(--display); font-size: 3rem; line-height: 1; color: var(--cocoa); font-variant-numeric: tabular-nums; }
+.stub .mon { font: 600 .8rem var(--body); letter-spacing: .2em; text-transform: uppercase; color: var(--hk); }
+.route { font-family: var(--display); font-size: 1.6rem; }
+.route b { font-weight: 400; color: var(--hk); }
+.countdown { color: var(--muted); font-size: .95rem; }
+@media (max-width: 520px) { .ticket { grid-template-columns: 1fr; } .ticket .stub { border-left: 0; border-top: 2px dashed var(--line); grid-auto-flow: column; justify-content: start; align-items: baseline; gap: .75rem; padding: 1rem 1.75rem; } }
+
+/* Menu */
+section { display: grid; gap: 1.5rem; }
+.sec-head { display: grid; gap: .75rem; justify-items: center; text-align: center; }
+.sec-head p { color: var(--muted); max-width: 46ch; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; }
+.item { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 1.5rem 1.25rem 1.25rem; display: grid; gap: .6rem; justify-items: center; text-align: center; }
+.item .art { width: 96px; height: 96px; }
+.item .brand { font: 500 .7rem var(--body); letter-spacing: .2em; text-transform: uppercase; color: var(--rose); }
+.item h3 { font-size: 1.25rem; }
+.price { background: var(--cocoa); color: var(--paper); border-radius: 999px; padding: .35rem 1rem; font: 600 .9rem var(--body); font-variant-numeric: tabular-nums; }
+.qty { display: flex; align-items: center; gap: .6rem; margin-top: .25rem; }
+.qty button { width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--line); background: transparent; color: var(--ink); font-size: 1.1rem; cursor: pointer; }
+.qty button:hover { border-color: var(--cocoa); }
+.qty output { min-width: 1.5ch; font-variant-numeric: tabular-nums; font-weight: 600; }
+.item.request { border-style: dashed; background: transparent; align-content: center; }
+.item.request p { color: var(--muted); font-size: .92rem; }
+
+.order { background: var(--card); border: 1px solid var(--line); border-radius: 20px; padding: 1.5rem; display: grid; gap: 1rem; }
+.order-row { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; flex-wrap: wrap; }
+.total { font-family: var(--display); font-size: 1.8rem; font-variant-numeric: tabular-nums; }
+.order textarea { width: 100%; min-height: 130px; resize: vertical; border: 1px solid var(--line); border-radius: 12px; padding: .9rem 1rem; background: var(--paper); color: var(--ink); font: 400 .92rem/1.5 var(--body); }
+.note { font-size: .85rem; color: var(--muted); }
+#copied { color: var(--hk); font-size: .9rem; }
+
+/* Steps */
+.steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1.5rem 1rem; counter-reset: s; }
+.steps li { counter-increment: s; display: grid; gap: .4rem; align-content: start; }
+.steps li::before { content: counter(s); font-family: var(--display); font-style: italic; font-size: 2.2rem; line-height: 1; color: var(--rose); }
+.steps b { font-weight: 600; }
+.steps span { color: var(--muted); font-size: .93rem; }
+
+/* What we take */
+.cats { display: flex; flex-wrap: wrap; gap: .6rem; justify-content: center; }
+.cats span { border: 1px solid var(--line); border-radius: 999px; padding: .45rem 1rem; font-size: .92rem; background: var(--card); }
+
+/* HK notes */
+.notes { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; }
+.notecard { border-top: 1px solid var(--cocoa); padding-top: 1rem; display: grid; gap: .5rem; }
+.notecard .tag { font: 500 .72rem var(--body); letter-spacing: .18em; text-transform: uppercase; color: var(--hk); }
+.notecard ul { margin: 0; padding-left: 1.1rem; color: var(--muted); font-size: .93rem; }
+.notecard p { color: var(--muted); font-size: .93rem; }
+
+/* FAQ */
+details { border-bottom: 1px solid var(--line); padding: 1rem 0; }
+details summary { cursor: pointer; font-family: var(--display); font-size: 1.15rem; list-style: none; display: flex; justify-content: space-between; gap: 1rem; }
+details summary::after { content: "+"; color: var(--rose); font-family: var(--body); }
+details[open] summary::after { content: "–"; }
+details p { margin-top: .6rem; color: var(--muted); max-width: 62ch; }
+
+footer { text-align: center; display: grid; gap: .75rem; justify-items: center; color: var(--muted); font-size: .9rem; border-top: 1px solid var(--line); padding-top: 2.5rem; }
+footer .logo { color: var(--ink); }
+.socials { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
+@media (prefers-reduced-motion: no-preference) { .btn, .qty button { transition: opacity .2s, border-color .2s; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <a class="logo" href="#top" id="top">lovedbymae.</a>
+    <nav aria-label="Menu">
+      <a href="#batch">Batch</a>
+      <a href="#cara">Cara Nitip</a>
+      <a href="#hk">HK Notes</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <span class="handle">@lovedbymae._</span>
+    <h1>Jastip <em>Hong Kong</em><br>ke Indonesia</h1>
+    <hr class="rule">
+    <p class="lede">Titip barang incaranmu dari Hong Kong. Dibeli langsung di toko, dibawa pulang, dikirim ke rumahmu.</p>
+    <div class="trust"><span>100% Original</span><span>Beli langsung di HK</span><span>Limited slot</span></div>
+    <div class="btns">
+      <a class="btn solid" href="https://www.instagram.com/lovedbymae._/" target="_blank" rel="noopener">DM di Instagram</a>
+      <a class="btn ghost" href="#batch">Lihat batch sekarang</a>
+    </div>
+  </div>
+
+  <div class="ticket" aria-label="Batch berikutnya">
+    <div class="main">
+      <span class="eyebrow">Next batch · Desember</span>
+      <div class="route">HK <b>→</b> Indonesia</div>
+      <p class="countdown" id="countdown">Barang sampai Indonesia sekitar 4 Desember 2026.</p>
+    </div>
+    <div class="stub">
+      <span class="mon">ETA</span>
+      <span class="day">4</span>
+      <span class="mon">Des</span>
+    </div>
+  </div>
+
+  <section id="batch">
+    <div class="sec-head">
+      <span class="eyebrow">Open PO</span>
+      <h2>Batch Desember</h2>
+      <hr class="rule">
+      <p>Pilih item, atur jumlah, lalu salin pesan order dan kirim lewat DM. Harga sudah termasuk fee jastip.</p>
+    </div>
+
+    <div class="grid" id="items"></div>
+
+    <div class="order" aria-live="polite">
+      <div class="order-row">
+        <span class="eyebrow">Ringkasan titipan</span>
+        <span class="total" id="total">IDR 0</span>
+      </div>
+      <label for="msg" class="note">Pesan untuk DM (boleh diedit)</label>
+      <textarea id="msg" spellcheck="false"></textarea>
+      <div class="order-row">
+        <span class="note">Ongkir dalam Indonesia dihitung terpisah.</span>
+        <div class="btns">
+          <span id="copied" hidden>Tersalin. Tempel di DM ya!</span>
+          <button class="btn ghost" id="copy" type="button">Salin pesan</button>
+          <a class="btn solid" href="https://www.instagram.com/lovedbymae._/" target="_blank" rel="noopener">Buka DM</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cara">
+    <div class="sec-head">
+      <span class="eyebrow">How it works</span>
+      <h2>Cara Nitip</h2>
+      <hr class="rule">
+    </div>
+    <ol class="steps">
+      <li><b>DM pesanan</b><span>Kirim nama item, varian/shade, dan jumlah lewat DM IG atau Threads.</span></li>
+      <li><b>Konfirmasi & bayar</b><span>Kami cek stok dan harga, lalu kamu transfer untuk kunci slot.</span></li>
+      <li><b>Dibeli di HK</b><span>Barang dibeli langsung di toko resmi Hong Kong, lengkap dengan struk.</span></li>
+      <li><b>Dikirim ke kamu</b><span>Setelah sampai Indonesia, paket dikirim ke alamatmu.</span></li>
+    </ol>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Bisa titip apa?</span>
+      <h2>Selain menu di atas</h2>
+      <hr class="rule">
+      <p>Cari sesuatu yang tidak ada di daftar? DM aja, nanti kami cek di Hong Kong.</p>
+    </div>
+    <div class="cats">
+      <span>Makeup & skincare</span><span>Parfum</span><span>Fashion & loungewear</span><span>Snack & oleh-oleh HK</span><span>Barang Taobao</span><span>Preloved pilihan</span>
+    </div>
+  </section>
+
+  <section id="hk">
+    <div class="sec-head">
+      <span class="eyebrow">Dari Hong Kong</span>
+      <h2>HK Notes</h2>
+      <hr class="rule">
+      <p>Catatan jalan-jalan dan makan selama belanja titipan kalian.</p>
+    </div>
+    <div class="notes">
+      <article class="notecard">
+        <span class="tag">Date ideas · Pasta</span>
+        <h3>Nocino, Central</h3>
+        <ul>
+          <li>Wagyu Beef Tartare (must try!)</li>
+          <li>Ox Cheek &amp; Preserved Walnuts Ragù Pappardelle</li>
+        </ul>
+      </article>
+      <article class="notecard">
+        <span class="tag">HK eats · Dessert</span>
+        <h3>Top 3 Froyo di Hong Kong</h3>
+        <p>Tiga tempat froyo favorit, mana yang paling enak? Lihat versi lengkapnya di Instagram.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="sec-head">
+      <span class="eyebrow">FAQ</span>
+      <h2>Yang sering ditanya</h2>
+      <hr class="rule">
+    </div>
+    <div>
+      <details><summary>Barangnya pasti original?</summary><p>Ya. Semua barang dibeli langsung di toko resmi di Hong Kong, dan struk pembelian bisa dikirim kalau kamu minta.</p></details>
+      <details><summary>Kapan barang sampai?</summary><p>Batch Desember diperkirakan sampai Indonesia tanggal 4 Desember 2026. Setelah itu paket dikirim ke alamatmu lewat ekspedisi.</p></details>
+      <details><summary>Kenapa slotnya terbatas?</summary><p>Barang dibawa langsung di bagasi, jadi kapasitas tiap batch terbatas. Slot dikunci setelah pembayaran.</p></details>
+      <details><summary>Bisa titip barang yang tidak ada di daftar?</summary><p>Bisa. Kirim nama barang dan link/foto lewat DM, nanti kami cek ketersediaan dan harganya.</p></details>
+      <details><summary>Kalau barangnya habis?</summary><p>Kami kabari langsung dan uangmu dikembalikan penuh untuk item yang tidak berhasil dibeli.</p></details>
+    </div>
+  </section>
+
+  <footer>
+    <span class="logo">lovedbymae.</span>
+    <p>preloved &amp; jastip HK · by @mae.clarrence</p>
+    <div class="socials">
+      <a href="https://www.instagram.com/lovedbymae._/" target="_blank" rel="noopener">Instagram @lovedbymae._</a>
+      <a href="https://www.threads.com/@lovedbymae._" target="_blank" rel="noopener">Threads @lovedbymae._</a>
+    </div>
+  </footer>
+</div>
+
+<script>
+const ITEMS = [
+  { id: "ct-powder", brand: "Charlotte Tilbury · Airbrush Flawless", name: "Finish Powder", price: 650000, art: "compact" },
+  { id: "ct-spray", brand: "Charlotte Tilbury · Airbrush Flawless", name: "Setting Spray", price: 650000, art: "spray" },
+];
+const ART = {
+  compact: `<svg class="art" viewBox="0 0 96 96" aria-hidden="true"><circle cx="48" cy="48" r="40" fill="var(--line)"/><circle cx="48" cy="48" r="40" fill="none" stroke="var(--rose)" stroke-width="3"/><circle cx="48" cy="48" r="28" fill="var(--paper)" stroke="var(--rose)" stroke-width="1"/></svg>`,
+  spray: `<svg class="art" viewBox="0 0 96 96" aria-hidden="true"><rect x="30" y="26" width="36" height="62" rx="6" fill="var(--line)" stroke="var(--rose)" stroke-width="2"/><rect x="38" y="10" width="20" height="16" rx="3" fill="var(--cocoa)"/><path d="M48 44 l8 12 l-8 12 l-8 -12 z" fill="var(--hk)" opacity=".8"/></svg>`,
+};
+const qty = Object.fromEntries(ITEMS.map(i => [i.id, 0]));
+const fmt = n => "IDR " + n.toLocaleString("id-ID");
+const grid = document.getElementById("items");
+
+grid.innerHTML = ITEMS.map(i => `
+  <article class="item">
+    ${ART[i.art]}
+    <span class="brand">${i.brand}</span>
+    <h3>${i.name}</h3>
+    <span class="price">${fmt(i.price).replace(",000", "K").replace(".000", "K")}</span>
+    <div class="qty">
+      <button type="button" data-id="${i.id}" data-d="-1" aria-label="Kurangi ${i.name}">−</button>
+      <output id="q-${i.id}">0</output>
+      <button type="button" data-id="${i.id}" data-d="1" aria-label="Tambah ${i.name}">+</button>
+    </div>
+  </article>`).join("") + `
+  <article class="item request">
+    <h3>Request item lain</h3>
+    <p>Tulis di pesan DM di bawah: nama barang, varian, dan jumlah.</p>
+  </article>`;
+
+const msg = document.getElementById("msg");
+let edited = false;
+msg.addEventListener("input", () => { edited = true; });
+
+function render() {
+  let total = 0, lines = [];
+  for (const i of ITEMS) {
+    const q = qty[i.id];
+    document.getElementById("q-" + i.id).textContent = q;
+    if (q) { total += q * i.price; lines.push(`- ${i.name} (${i.brand.split(" · ")[0]}) x${q} = ${fmt(q * i.price)}`); }
+  }
+  document.getElementById("total").textContent = fmt(total);
+  if (!edited) {
+    msg.value = lines.length
+      ? `Halo kak, aku mau nitip batch Desember ya:\n${lines.join("\n")}\nTotal: ${fmt(total)}\n\nNama:\nKota pengiriman:`
+      : `Halo kak, aku mau nitip batch Desember ya:\n(pilih item di atas atau tulis request di sini)\n\nNama:\nKota pengiriman:`;
+  }
+}
+grid.addEventListener("click", e => {
+  const b = e.target.closest("button[data-id]");
+  if (!b) return;
+  qty[b.dataset.id] = Math.max(0, Math.min(10, qty[b.dataset.id] + Number(b.dataset.d)));
+  edited = false;
+  render();
+});
+
+document.getElementById("copy").addEventListener("click", () => {
+  const done = () => { const c = document.getElementById("copied"); c.hidden = false; setTimeout(() => c.hidden = true, 2500); };
+  try {
+    navigator.clipboard.writeText(msg.value).then(done, () => { msg.select(); done(); });
+  } catch { msg.select(); done(); }
+});
+
+(function countdown() {
+  const eta = new Date(2026, 11, 4);
+  const today = new Date(); today.setHours(0,0,0,0);
+  const days = Math.round((eta - today) / 86400000);
+  const el = document.getElementById("countdown");
+  if (days > 1) el.textContent = `Barang sampai Indonesia sekitar 4 Desember 2026, ${days} hari lagi. Slot terbatas.`;
+  else if (days >= 0) el.textContent = "Barang mendarat sebentar lagi. DM untuk batch berikutnya.";
+  else el.textContent = "Batch Desember sudah mendarat. DM untuk info batch berikutnya.";
+})();
+render();
+</script>
+
+</html>
