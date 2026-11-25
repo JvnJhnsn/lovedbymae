@@ -26,6 +26,7 @@
   color-scheme: light;
 }
 * { box-sizing: border-box; }
+[hidden] { display: none !important; }
 html { scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 body {
@@ -123,6 +124,19 @@ section { display: grid; gap: 1.5rem; scroll-margin-top: 80px; }
 .empty-state { grid-column: 1 / -1; text-align: center; color: var(--muted); padding: 2rem 0; }
 
 .toast { position: fixed; left: 50%; bottom: calc(20px + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%); background: var(--cocoa); color: #fff; padding: .75rem 1.2rem; border-radius: 999px; font-size: .85rem; z-index: 50; max-width: calc(100% - 32px); text-align: center; box-shadow: var(--shadow); }
+
+/* Paste reminder pop-up */
+.modal { position: fixed; inset: 0; z-index: 60; background: rgba(46, 33, 28, .45); display: grid; place-items: end center; padding: 16px max(16px, env(safe-area-inset-right, 0px)) calc(16px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); }
+@media (min-width: 560px) { .modal { place-items: center; } }
+.sheet { background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow); width: 100%; max-width: 420px; padding: 1.5rem 1.4rem 1.3rem; display: grid; gap: .9rem; }
+.sheet h3 { font-size: 1.35rem; }
+.sheet .steps-mini { margin: 0; padding-left: 1.2rem; color: var(--muted); font-size: .88rem; display: grid; gap: .2rem; }
+.sheet .steps-mini b { color: var(--cocoa); }
+.copied-box { background: var(--chip); border-radius: 16px; padding: .85rem 1rem; font: 400 .85rem/1.5 var(--sans); white-space: pre-wrap; overflow-wrap: anywhere; margin: 0; user-select: all; -webkit-user-select: all; }
+.status { font: 600 .72rem var(--sans); letter-spacing: .12em; text-transform: uppercase; color: var(--rose); }
+.sheet .row { display: flex; gap: .6rem; flex-wrap: wrap; }
+.sheet .row .btn { flex: 1 1 140px; }
+.sheet .close-x { justify-self: center; border: 0; background: transparent; color: var(--muted); font: 500 .82rem var(--sans); cursor: pointer; padding: .3rem .6rem; }
 
 /* Steps */
 .steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 1rem; counter-reset: s; }
@@ -276,6 +290,19 @@ footer .logo { color: var(--cocoa); }
   </footer>
 </div>
 <div class="toast" id="toast" hidden></div>
+<div class="modal" id="modal" hidden>
+  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+    <span class="status" id="mStatus"></span>
+    <h3 id="mTitle"></h3>
+    <pre class="copied-box" id="mText"></pre>
+    <ol class="steps-mini" id="mSteps"></ol>
+    <div class="row">
+      <button type="button" class="btn" id="mCopy"></button>
+      <a class="btn solid" id="mOpen" target="_blank" rel="noopener"></a>
+    </div>
+    <button type="button" class="close-x" id="mClose"></button>
+  </div>
+</div>
 
 <script>
 // ig.me/m/ opens the DM in the Instagram app on phones; on desktop Instagram shows "page isn't available", so use the profile (it has a Message button).
@@ -303,6 +330,9 @@ const T = {
     order: "Order via DM",
     msg: (p, v, s) => `Halo kak, aku mau order:\n${p.brand} – ${p.name}\nUkuran: ${v}${s ? `\nShade: ${s}` : ""}`,
     copied: "Detail pesanan tersalin. Tempel di DM ya!", pickShade: "Pilih shade dulu ya.",
+    mStatusOk: "✓ Pesanan tersalin", mStatusFail: "Salin pesanan ini dulu", mTitle: "Tempel pesan ini di DM ya!",
+    mSteps: ["Tekan <b>Buka Instagram</b>", "Tekan lama kolom pesan, pilih <b>Tempel / Paste</b>", "Tekan <b>Kirim</b>"],
+    mCopy: "Salin lagi", mCopied: "Tersalin ✓", mOpen: "Buka Instagram", mClose: "Batal",
     howEyebrow: "How to order", howTitle: "Cara Order",
     s1t: "Pilih produk", s1d: "Cari di katalog, pilih ukuran dan shade.",
     s2t: "DM pesananmu", s2d: "Kirim nama produk, ukuran, dan shade ke @lovedbymae._ lewat Instagram.",
@@ -339,6 +369,9 @@ const T = {
     order: "Order via DM",
     msg: (p, v, s) => `Hi! I'd like to order:\n${p.brand} – ${p.name}\nSize: ${v}${s ? `\nShade: ${s}` : ""}`,
     copied: "Order details copied. Paste them into the DM!", pickShade: "Please choose a shade first.",
+    mStatusOk: "✓ Order copied", mStatusFail: "Copy this order first", mTitle: "Paste this message in the DM!",
+    mSteps: ["Tap <b>Open Instagram</b>", "Long-press the message box and choose <b>Paste</b>", "Tap <b>Send</b>"],
+    mCopy: "Copy again", mCopied: "Copied ✓", mOpen: "Open Instagram", mClose: "Cancel",
     howEyebrow: "How it works", howTitle: "How to Order",
     s1t: "Pick a product", s1d: "Find it in the catalog and choose the size and shade.",
     s2t: "DM your order", s2d: "Send the product name, size, and shade to @lovedbymae._ on Instagram.",
@@ -434,9 +467,52 @@ document.addEventListener("click", e => {
     if (p.available_shades.length > 1 && !sel.s) { e.preventDefault(); toast(t.pickShade); return; }
     const shade = sel.s || p.available_shades[0] || null;
     const text = t.msg(p, t.fix(p.variants[sel.v].size) + " · " + rp(p.variants[sel.v].price_idr), shade ? t.fix(shade) : null);
-    try { navigator.clipboard.writeText(text).then(() => toast(t.copied), () => {}); } catch {}
+    e.preventDefault();
+    openModal(text);
   }
 });
+
+// Paste reminder pop-up: copy the order, show it, then let the customer open Instagram.
+let lastFocus = null;
+function copyText(text) {
+  try { return navigator.clipboard.writeText(text).then(() => true, () => false); }
+  catch { return Promise.resolve(false); }
+}
+function selectBox() {
+  const r = document.createRange(); r.selectNodeContents($("mText"));
+  const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+}
+function setStatus(ok) {
+  const t = T[lang];
+  $("mStatus").textContent = ok ? t.mStatusOk : t.mStatusFail;
+  if (!ok) selectBox();
+}
+function openModal(text) {
+  const t = T[lang];
+  lastFocus = document.activeElement;
+  $("mTitle").textContent = t.mTitle;
+  $("mText").textContent = text;
+  $("mSteps").innerHTML = t.mSteps.map(s => `<li>${s}</li>`).join("");
+  $("mCopy").textContent = t.mCopy;
+  $("mOpen").textContent = t.mOpen;
+  $("mOpen").href = DM_URL;
+  $("mClose").textContent = t.mClose;
+  $("mStatus").textContent = "";
+  $("modal").hidden = false;
+  copyText(text).then(setStatus);
+  $("mOpen").focus();
+}
+function closeModal() { $("modal").hidden = true; if (lastFocus) lastFocus.focus(); }
+$("mCopy").addEventListener("click", () => {
+  copyText($("mText").textContent).then(ok => {
+    setStatus(ok);
+    if (ok) { $("mCopy").textContent = T[lang].mCopied; setTimeout(() => $("mCopy").textContent = T[lang].mCopy, 1800); }
+  });
+});
+$("mOpen").addEventListener("click", () => { copyText($("mText").textContent); setTimeout(closeModal, 300); });
+$("mClose").addEventListener("click", closeModal);
+$("modal").addEventListener("click", e => { if (e.target.id === "modal") closeModal(); });
+document.addEventListener("keydown", e => { if (e.key === "Escape" && !$("modal").hidden) closeModal(); });
 $("q").addEventListener("input", e => { state.q = e.target.value; renderGrid(); });
 
 applyLang();
