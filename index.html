@@ -278,7 +278,10 @@ footer .logo { color: var(--cocoa); }
 <div class="toast" id="toast" hidden></div>
 
 <script>
-const DM_URL = "https://ig.me/m/lovedbymae._";
+// ig.me/m/ opens the DM in the Instagram app on phones; on desktop Instagram shows "page isn't available", so use the profile (it has a Message button).
+const IS_MOBILE = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent) || (navigator.maxTouchPoints > 1 && /Macintosh/.test(navigator.userAgent));
+const DM_URL = IS_MOBILE ? "https://ig.me/m/lovedbymae._" : "https://www.instagram.com/lovedbymae._/";
+document.querySelectorAll('a[href="https://ig.me/m/lovedbymae._"]').forEach(a => a.href = DM_URL);
 const T = {
   id: {
     navCatalog: "Katalog", navHow: "Cara Order", navFaq: "FAQ",
