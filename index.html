@@ -3,239 +3,241 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Jastip Hong Kong ke Indonesia oleh lovedbymae. 100% original, beli langsung di HK.">
+<meta name="description" content="Jastip Hong Kong ke Indonesia oleh @lovedbymae._ — 100% original, beli langsung di Hong Kong.">
 <title>lovedbymae. Jastip HK</title>
-<meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Jost:wght@400;500;600&display=swap">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@400;500;600&display=swap">
 <style>
-/* Layout: one narrow column like a gift card, a "batch ticket" up top, then menu → how-to → HK notes → FAQ. */
+/* Single light look matching the Instagram feed: cream ground, white rounded cards, cocoa price pills. */
 :root {
-  --paper: #f5efe8;
-  --card: #fffdfa;
-  --cocoa: #4a332b;
-  --ink: #2e211c;
-  --muted: #8a7468;
-  --rose: #b58a76;
-  --line: #e6dbd0;
-  --hk: #b3263a;
-  --display: "Playfair Display", Georgia, "Times New Roman", serif;
-  --body: "Jost", "Segoe UI", system-ui, sans-serif;
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --paper: #1c1513; --card: #261d1a; --cocoa: #e9d3c4; --ink: #f1e6dd;
-    --muted: #b29c8f; --rose: #d3a891; --line: #3a2d28; --hk: #e4566a; color-scheme: dark;
-  }
-}
-:root[data-theme="dark"] {
-  --paper: #1c1513; --card: #261d1a; --cocoa: #e9d3c4; --ink: #f1e6dd;
-  --muted: #b29c8f; --rose: #d3a891; --line: #3a2d28; --hk: #e4566a; color-scheme: dark;
+  --cream: #F6F0EA;
+  --card: #FFFFFF;
+  --cocoa: #46322D;
+  --muted: #8C756B;
+  --rose: #B08068;
+  --line: #E8DDD3;
+  --chip: #F3EAE2;
+  --hk: #B3263A;
+  --serif: "Playfair Display", Georgia, "Times New Roman", serif;
+  --sans: "Montserrat", "Segoe UI", system-ui, sans-serif;
+  --radius: 28px;
+  --shadow: 0 10px 30px -12px rgba(70, 50, 45, .18);
+  color-scheme: light;
 }
 * { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 body {
-  background: var(--paper); color: var(--ink);
-  font: 400 16px/1.6 var(--body);
+  margin: 0; background: var(--cream); color: var(--cocoa);
+  font: 400 15px/1.6 var(--sans);
   padding-left: max(16px, env(safe-area-inset-left, 0px));
   padding-right: max(16px, env(safe-area-inset-right, 0px));
 }
-.wrap { max-width: 760px; margin: 0 auto; padding-block: 2.5rem 4rem; display: grid; gap: 4rem; }
-h1, h2, h3 { font-family: var(--display); font-weight: 400; margin: 0; text-wrap: balance; color: var(--ink); }
-h2 { font-size: clamp(1.8rem, 5vw, 2.4rem); }
-h3 { font-size: 1.3rem; }
-p { margin: 0; }
-.eyebrow { font: 500 .75rem/1 var(--body); letter-spacing: .22em; text-transform: uppercase; color: var(--rose); }
-.handle { font: 400 .9rem var(--body); letter-spacing: .12em; color: var(--muted); }
-.rule { width: 56px; height: 1px; background: var(--rose); border: 0; margin: 0; }
+img { max-width: 100%; display: block; }
 a { color: inherit; }
+button { font: inherit; color: inherit; }
 :focus-visible { outline: 2px solid var(--rose); outline-offset: 3px; }
+.wrap { max-width: 1080px; margin: 0 auto; padding-block: 1.25rem 4rem; display: grid; gap: 3.5rem; }
+h1, h2, h3 { font-family: var(--serif); font-weight: 400; margin: 0; text-wrap: balance; }
+p { margin: 0; }
+.eyebrow { font: 600 .7rem/1 var(--sans); letter-spacing: .22em; text-transform: uppercase; color: var(--rose); }
+.rule { width: 56px; height: 1px; background: var(--rose); border: 0; margin: 0; }
 
 /* Header */
-header { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
-.logo { font-family: var(--display); font-size: 1.5rem; font-style: italic; text-decoration: none; }
-nav { display: flex; gap: 1.25rem; flex-wrap: wrap; font-size: .9rem; }
+header { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: var(--cream); display: flex; justify-content: space-between; align-items: center; gap: .75rem; padding-block: .75rem; flex-wrap: wrap; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 30; background: var(--cream); }
+.logo { font-family: var(--serif); font-style: italic; font-size: 1.45rem; text-decoration: none; }
+.head-right { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
+nav { display: flex; gap: 1rem; font-size: .82rem; font-weight: 500; }
 nav a { text-decoration: none; color: var(--muted); }
-nav a:hover { color: var(--ink); }
+nav a:hover { color: var(--cocoa); }
+.lang { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; padding: 3px; background: var(--card); }
+.lang button { border: 0; background: transparent; padding: .3rem .7rem; border-radius: 999px; font: 600 .72rem var(--sans); letter-spacing: .12em; cursor: pointer; color: var(--muted); }
+.lang button[aria-pressed="true"] { background: var(--cocoa); color: #fff; }
+@media (max-width: 560px) { nav { display: none; } }
 
 /* Hero */
-.hero { display: grid; gap: 1.25rem; justify-items: center; text-align: center; padding-top: 1rem; }
-.hero h1 { font-size: clamp(2.6rem, 9vw, 4.4rem); line-height: 1.05; }
+.hero { display: grid; gap: 1.1rem; justify-items: center; text-align: center; padding-top: 1.5rem; }
+.hero .handle { font-size: .85rem; letter-spacing: .14em; color: var(--muted); }
+.hero h1 { font-size: clamp(2.5rem, 8.5vw, 4.4rem); line-height: 1.05; }
 .hero h1 em { color: var(--rose); }
-.hero p.lede { max-width: 34ch; color: var(--muted); font-size: 1.05rem; }
-.trust { font: 500 .78rem var(--body); letter-spacing: .18em; text-transform: uppercase; color: var(--ink); display: flex; flex-wrap: wrap; justify-content: center; gap: .4rem 1rem; }
+.hero .lede { max-width: 40ch; color: var(--muted); font-size: 1rem; }
+.trust { font: 600 .72rem var(--sans); letter-spacing: .18em; text-transform: uppercase; display: flex; flex-wrap: wrap; justify-content: center; gap: .4rem 1rem; }
 .trust span + span::before { content: "·"; margin-right: 1rem; color: var(--rose); }
-.btns { display: flex; gap: .75rem; flex-wrap: wrap; justify-content: center; }
-.btn { display: inline-flex; align-items: center; gap: .5rem; padding: .8rem 1.4rem; border-radius: 999px; font: 500 .95rem var(--body); text-decoration: none; border: 1px solid var(--cocoa); cursor: pointer; }
-.btn.solid { background: var(--cocoa); color: var(--paper); }
-.btn.ghost { background: transparent; color: var(--cocoa); }
+.btns { display: flex; gap: .7rem; flex-wrap: wrap; justify-content: center; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .45rem; padding: .8rem 1.4rem; border-radius: 999px; font: 600 .85rem var(--sans); text-decoration: none; border: 1px solid var(--cocoa); cursor: pointer; background: transparent; color: var(--cocoa); }
+.btn.solid { background: var(--cocoa); color: #fff; }
 .btn:hover { opacity: .88; }
 
-/* Batch ticket */
-.ticket { background: var(--card); border: 1px solid var(--line); border-radius: 20px; display: grid; grid-template-columns: 1fr auto; overflow: hidden; }
-.ticket .main { padding: 1.5rem 1.75rem; display: grid; gap: .5rem; min-width: 0; }
-.ticket .stub { border-left: 2px dashed var(--line); padding: 1.5rem 1.75rem; display: grid; place-content: center; text-align: center; gap: .15rem; }
-.stub .day { font-family: var(--display); font-size: 3rem; line-height: 1; color: var(--cocoa); font-variant-numeric: tabular-nums; }
-.stub .mon { font: 600 .8rem var(--body); letter-spacing: .2em; text-transform: uppercase; color: var(--hk); }
-.route { font-family: var(--display); font-size: 1.6rem; }
+.ticket { background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow); display: grid; grid-template-columns: 1fr auto; overflow: hidden; max-width: 680px; width: 100%; justify-self: center; }
+.ticket .main { padding: 1.4rem 1.6rem; display: grid; gap: .4rem; min-width: 0; }
+.ticket .stub { border-left: 2px dashed var(--line); padding: 1.4rem 1.6rem; display: grid; place-content: center; text-align: center; }
+.stub .day { font-family: var(--serif); font-size: 2.8rem; line-height: 1; font-variant-numeric: tabular-nums; }
+.stub .mon { font: 600 .72rem var(--sans); letter-spacing: .2em; text-transform: uppercase; color: var(--hk); }
+.route { font-family: var(--serif); font-size: 1.5rem; }
 .route b { font-weight: 400; color: var(--hk); }
-.countdown { color: var(--muted); font-size: .95rem; }
-@media (max-width: 520px) { .ticket { grid-template-columns: 1fr; } .ticket .stub { border-left: 0; border-top: 2px dashed var(--line); grid-auto-flow: column; justify-content: start; align-items: baseline; gap: .75rem; padding: 1rem 1.75rem; } }
+.countdown { color: var(--muted); font-size: .9rem; }
+@media (max-width: 520px) { .ticket { grid-template-columns: 1fr; } .ticket .stub { border-left: 0; border-top: 2px dashed var(--line); grid-auto-flow: column; justify-content: start; align-items: baseline; gap: .6rem; padding: .9rem 1.6rem; } }
 
-/* Menu */
-section { display: grid; gap: 1.5rem; }
-.sec-head { display: grid; gap: .75rem; justify-items: center; text-align: center; }
-.sec-head p { color: var(--muted); max-width: 46ch; }
-.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; }
-.item { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 1.5rem 1.25rem 1.25rem; display: grid; gap: .6rem; justify-items: center; text-align: center; }
-.item .art { width: 96px; height: 96px; }
-.item .brand { font: 500 .7rem var(--body); letter-spacing: .2em; text-transform: uppercase; color: var(--rose); }
-.item h3 { font-size: 1.25rem; }
-.price { background: var(--cocoa); color: var(--paper); border-radius: 999px; padding: .35rem 1rem; font: 600 .9rem var(--body); font-variant-numeric: tabular-nums; }
-.qty { display: flex; align-items: center; gap: .6rem; margin-top: .25rem; }
-.qty button { width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--line); background: transparent; color: var(--ink); font-size: 1.1rem; cursor: pointer; }
-.qty button:hover { border-color: var(--cocoa); }
-.qty output { min-width: 1.5ch; font-variant-numeric: tabular-nums; font-weight: 600; }
-.item.request { border-style: dashed; background: transparent; align-content: center; }
-.item.request p { color: var(--muted); font-size: .92rem; }
+/* Sections */
+section { display: grid; gap: 1.5rem; scroll-margin-top: 80px; }
+.sec-head { display: grid; gap: .7rem; justify-items: center; text-align: center; }
+.sec-head h2 { font-size: clamp(1.8rem, 5vw, 2.4rem); }
+.sec-head p { color: var(--muted); max-width: 48ch; }
 
-.order { background: var(--card); border: 1px solid var(--line); border-radius: 20px; padding: 1.5rem; display: grid; gap: 1rem; }
-.order-row { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; flex-wrap: wrap; }
-.total { font-family: var(--display); font-size: 1.8rem; font-variant-numeric: tabular-nums; }
-.order textarea { width: 100%; min-height: 130px; resize: vertical; border: 1px solid var(--line); border-radius: 12px; padding: .9rem 1rem; background: var(--paper); color: var(--ink); font: 400 .92rem/1.5 var(--body); }
-.note { font-size: .85rem; color: var(--muted); }
-#copied { color: var(--hk); font-size: .9rem; }
+/* Catalog controls */
+.controls { display: grid; gap: .8rem; }
+.search { position: relative; }
+.search input { width: 100%; border: 1px solid var(--line); background: var(--card); border-radius: 999px; padding: .85rem 1.2rem .85rem 2.6rem; font: 400 .92rem var(--sans); color: var(--cocoa); }
+.search input::placeholder { color: var(--muted); }
+.search svg { position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); width: 16px; height: 16px; stroke: var(--muted); }
+.tabs { display: flex; gap: .5rem; overflow-x: auto; padding-bottom: 2px; scrollbar-width: none; }
+.tabs::-webkit-scrollbar { display: none; }
+.tab { flex: none; border: 1px solid var(--line); background: var(--card); border-radius: 999px; padding: .5rem 1rem; font: 500 .82rem var(--sans); cursor: pointer; white-space: nowrap; }
+.tab[aria-pressed="true"] { background: var(--cocoa); border-color: var(--cocoa); color: #fff; }
+.tabs.brands .tab { font-size: .7rem; letter-spacing: .14em; text-transform: uppercase; padding: .45rem .9rem; }
+.count { font-size: .82rem; color: var(--muted); }
+
+/* Product grid */
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1.1rem; }
+@media (max-width: 540px) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .7rem; } }
+.card { background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow); padding: .9rem .9rem 1.1rem; display: grid; grid-template-rows: auto auto auto 1fr auto; gap: .55rem; min-width: 0; }
+.photo { aspect-ratio: 1; border-radius: 20px; background: #fff; overflow: hidden; display: grid; place-items: center; }
+.photo img { width: 100%; height: 100%; object-fit: contain; }
+.photo.empty { background: var(--chip); color: var(--muted); font-family: var(--serif); font-style: italic; font-size: 1.3rem; }
+.brand { font: 600 .64rem var(--sans); letter-spacing: .2em; text-transform: uppercase; color: var(--rose); padding-inline: .2rem; }
+.card h3 { font-size: 1.05rem; line-height: 1.3; padding-inline: .2rem; overflow-wrap: anywhere; }
+.opts { display: grid; gap: .5rem; align-content: start; }
+.label { font: 600 .6rem var(--sans); letter-spacing: .16em; text-transform: uppercase; color: var(--muted); padding-inline: .2rem; }
+.chips { display: flex; flex-wrap: wrap; gap: .35rem; }
+.chip { border: 1px solid var(--line); background: var(--chip); border-radius: 999px; padding: .28rem .65rem; font: 500 .72rem var(--sans); cursor: pointer; color: var(--cocoa); }
+.chip[aria-pressed="true"] { border-color: var(--cocoa); background: #fff; box-shadow: inset 0 0 0 1px var(--cocoa); }
+.sizes { display: grid; gap: .35rem; }
+.size { display: flex; justify-content: space-between; align-items: center; gap: .5rem; border: 1px solid var(--line); border-radius: 14px; padding: .35rem .4rem .35rem .7rem; background: transparent; cursor: pointer; text-align: left; font-size: .76rem; }
+.size[aria-pressed="true"] { border-color: var(--cocoa); box-shadow: inset 0 0 0 1px var(--cocoa); }
+.size.single { cursor: default; }
+.price { background: var(--cocoa); color: #fff; border-radius: 999px; padding: .28rem .7rem; font: 600 .76rem var(--sans); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.order-btn { width: 100%; padding: .7rem .8rem; font-size: .78rem; }
+@media (max-width: 540px) { .card { padding: .6rem .6rem .8rem; border-radius: 22px; } .photo { border-radius: 16px; } .card h3 { font-size: .92rem; } .size { flex-wrap: wrap; } }
+.empty-state { grid-column: 1 / -1; text-align: center; color: var(--muted); padding: 2rem 0; }
+
+.toast { position: fixed; left: 50%; bottom: calc(20px + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%); background: var(--cocoa); color: #fff; padding: .75rem 1.2rem; border-radius: 999px; font-size: .85rem; z-index: 50; max-width: calc(100% - 32px); text-align: center; box-shadow: var(--shadow); }
 
 /* Steps */
-.steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1.5rem 1rem; counter-reset: s; }
-.steps li { counter-increment: s; display: grid; gap: .4rem; align-content: start; }
-.steps li::before { content: counter(s); font-family: var(--display); font-style: italic; font-size: 2.2rem; line-height: 1; color: var(--rose); }
+.steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 1rem; counter-reset: s; }
+.steps li { counter-increment: s; background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow); padding: 1.3rem 1.3rem 1.4rem; display: grid; gap: .35rem; align-content: start; }
+.steps li::before { content: counter(s); font-family: var(--serif); font-style: italic; font-size: 2rem; line-height: 1; color: var(--rose); }
 .steps b { font-weight: 600; }
-.steps span { color: var(--muted); font-size: .93rem; }
-
-/* What we take */
-.cats { display: flex; flex-wrap: wrap; gap: .6rem; justify-content: center; }
-.cats span { border: 1px solid var(--line); border-radius: 999px; padding: .45rem 1rem; font-size: .92rem; background: var(--card); }
+.steps span { color: var(--muted); font-size: .88rem; }
 
 /* HK notes */
-.notes { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; }
-.notecard { border-top: 1px solid var(--cocoa); padding-top: 1rem; display: grid; gap: .5rem; }
-.notecard .tag { font: 500 .72rem var(--body); letter-spacing: .18em; text-transform: uppercase; color: var(--hk); }
-.notecard ul { margin: 0; padding-left: 1.1rem; color: var(--muted); font-size: .93rem; }
-.notecard p { color: var(--muted); font-size: .93rem; }
+.notes { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; }
+.notecard { border-top: 1px solid var(--cocoa); padding-top: 1rem; display: grid; gap: .45rem; }
+.notecard .tag { font: 600 .66rem var(--sans); letter-spacing: .18em; text-transform: uppercase; color: var(--hk); }
+.notecard ul { margin: 0; padding-left: 1.1rem; color: var(--muted); font-size: .9rem; }
+.notecard p { color: var(--muted); font-size: .9rem; }
 
 /* FAQ */
+.faq { max-width: 720px; width: 100%; justify-self: center; }
 details { border-bottom: 1px solid var(--line); padding: 1rem 0; }
-details summary { cursor: pointer; font-family: var(--display); font-size: 1.15rem; list-style: none; display: flex; justify-content: space-between; gap: 1rem; }
-details summary::after { content: "+"; color: var(--rose); font-family: var(--body); }
+summary { cursor: pointer; font-family: var(--serif); font-size: 1.1rem; list-style: none; display: flex; justify-content: space-between; gap: 1rem; }
+summary::-webkit-details-marker { display: none; }
+summary::after { content: "+"; color: var(--rose); font-family: var(--sans); }
 details[open] summary::after { content: "–"; }
-details p { margin-top: .6rem; color: var(--muted); max-width: 62ch; }
+details p { margin-top: .55rem; color: var(--muted); max-width: 62ch; }
 
-footer { text-align: center; display: grid; gap: .75rem; justify-items: center; color: var(--muted); font-size: .9rem; border-top: 1px solid var(--line); padding-top: 2.5rem; }
-footer .logo { color: var(--ink); }
+footer { text-align: center; display: grid; gap: .7rem; justify-items: center; color: var(--muted); font-size: .85rem; border-top: 1px solid var(--line); padding-top: 2.5rem; }
+footer .logo { color: var(--cocoa); }
 .socials { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
-@media (prefers-reduced-motion: no-preference) { .btn, .qty button { transition: opacity .2s, border-color .2s; } }
+@media (prefers-reduced-motion: no-preference) { .btn, .tab, .chip, .size { transition: background-color .15s, border-color .15s, opacity .15s; } }
 </style>
-
+</head>
+<body>
 <div class="wrap">
   <header>
     <a class="logo" href="#top" id="top">lovedbymae.</a>
-    <nav aria-label="Menu">
-      <a href="#batch">Batch</a>
-      <a href="#cara">Cara Nitip</a>
-      <a href="#hk">HK Notes</a>
-      <a href="#faq">FAQ</a>
-    </nav>
+    <div class="head-right">
+      <nav aria-label="Menu">
+        <a href="#katalog" data-i18n="navCatalog">Katalog</a>
+        <a href="#cara" data-i18n="navHow">Cara Order</a>
+        <a href="#faq" data-i18n="navFaq">FAQ</a>
+      </nav>
+      <div class="lang" role="group" aria-label="Language / Bahasa">
+        <button type="button" data-lang="id" aria-pressed="true">ID</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
   </header>
 
   <div class="hero">
     <span class="handle">@lovedbymae._</span>
-    <h1>Jastip <em>Hong Kong</em><br>ke Indonesia</h1>
+    <h1 data-i18n-html="heroTitle">Jastip <em>Hong Kong</em><br>ke Indonesia</h1>
     <hr class="rule">
-    <p class="lede">Titip barang incaranmu dari Hong Kong. Dibeli langsung di toko, dibawa pulang, dikirim ke rumahmu.</p>
-    <div class="trust"><span>100% Original</span><span>Beli langsung di HK</span><span>Limited slot</span></div>
+    <p class="lede" data-i18n="heroLede">Jastip (jasa titip) artinya kami belanjakan barang incaranmu langsung di Hong Kong, bawa pulang, lalu kirim ke rumahmu.</p>
+    <div class="trust" id="tagline"></div>
     <div class="btns">
-      <a class="btn solid" href="https://www.instagram.com/lovedbymae._/" target="_blank" rel="noopener">DM di Instagram</a>
-      <a class="btn ghost" href="#batch">Lihat batch sekarang</a>
+      <a class="btn solid" href="#katalog" data-i18n="ctaCatalog">Lihat katalog</a>
+      <a class="btn" href="https://ig.me/m/lovedbymae._" target="_blank" rel="noopener" data-i18n="ctaDm">DM di Instagram</a>
     </div>
   </div>
 
-  <div class="ticket" aria-label="Batch berikutnya">
+  <div class="ticket" aria-label="Next batch">
     <div class="main">
-      <span class="eyebrow">Next batch · Desember</span>
+      <span class="eyebrow" data-i18n="batchEyebrow">Batch berikutnya · Desember</span>
       <div class="route">HK <b>→</b> Indonesia</div>
-      <p class="countdown" id="countdown">Barang sampai Indonesia sekitar 4 Desember 2026.</p>
+      <p class="countdown" id="countdown"></p>
     </div>
     <div class="stub">
       <span class="mon">ETA</span>
       <span class="day">4</span>
-      <span class="mon">Des</span>
+      <span class="mon" data-i18n="dec">Des</span>
     </div>
   </div>
 
-  <section id="batch">
+  <section id="katalog">
     <div class="sec-head">
-      <span class="eyebrow">Open PO</span>
-      <h2>Batch Desember</h2>
+      <span class="eyebrow" data-i18n="catEyebrow">Open PO</span>
+      <h2 data-i18n="catTitle">Katalog</h2>
       <hr class="rule">
-      <p>Pilih item, atur jumlah, lalu salin pesan order dan kirim lewat DM. Harga sudah termasuk fee jastip.</p>
+      <p data-i18n="catLede">Pilih ukuran dan shade, lalu tekan Order via DM. Detail pesananmu otomatis tersalin untuk ditempel di DM.</p>
     </div>
-
-    <div class="grid" id="items"></div>
-
-    <div class="order" aria-live="polite">
-      <div class="order-row">
-        <span class="eyebrow">Ringkasan titipan</span>
-        <span class="total" id="total">IDR 0</span>
-      </div>
-      <label for="msg" class="note">Pesan untuk DM (boleh diedit)</label>
-      <textarea id="msg" spellcheck="false"></textarea>
-      <div class="order-row">
-        <span class="note">Ongkir dalam Indonesia dihitung terpisah.</span>
-        <div class="btns">
-          <span id="copied" hidden>Tersalin. Tempel di DM ya!</span>
-          <button class="btn ghost" id="copy" type="button">Salin pesan</button>
-          <a class="btn solid" href="https://www.instagram.com/lovedbymae._/" target="_blank" rel="noopener">Buka DM</a>
-        </div>
-      </div>
+    <div class="controls">
+      <label class="search">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="q" type="search" autocomplete="off" data-i18n-ph="searchPh" placeholder="Cari produk atau brand…" aria-label="Search">
+      </label>
+      <div class="tabs" id="catTabs" role="group" aria-label="Category"></div>
+      <div class="tabs brands" id="brandTabs" role="group" aria-label="Brand"></div>
+      <span class="count" id="count" aria-live="polite"></span>
     </div>
+    <div class="grid" id="grid"><p class="empty-state" data-i18n="loading">Memuat katalog…</p></div>
   </section>
 
   <section id="cara">
     <div class="sec-head">
-      <span class="eyebrow">How it works</span>
-      <h2>Cara Nitip</h2>
+      <span class="eyebrow" data-i18n="howEyebrow">How to order</span>
+      <h2 data-i18n="howTitle">Cara Order</h2>
       <hr class="rule">
     </div>
     <ol class="steps">
-      <li><b>DM pesanan</b><span>Kirim nama item, varian/shade, dan jumlah lewat DM IG atau Threads.</span></li>
-      <li><b>Konfirmasi & bayar</b><span>Kami cek stok dan harga, lalu kamu transfer untuk kunci slot.</span></li>
-      <li><b>Dibeli di HK</b><span>Barang dibeli langsung di toko resmi Hong Kong, lengkap dengan struk.</span></li>
-      <li><b>Dikirim ke kamu</b><span>Setelah sampai Indonesia, paket dikirim ke alamatmu.</span></li>
+      <li><b data-i18n="s1t">Pilih produk</b><span data-i18n="s1d">Cari di katalog, pilih ukuran dan shade.</span></li>
+      <li><b data-i18n="s2t">DM pesananmu</b><span data-i18n="s2d">Kirim nama produk, ukuran, dan shade ke @lovedbymae._ lewat Instagram.</span></li>
+      <li><b data-i18n="s3t">Bayar</b><span data-i18n="s3d">Kami konfirmasi stok dan total, lalu kamu transfer untuk kunci slot.</span></li>
+      <li><b data-i18n="s4t">Dikirim</b><span data-i18n="s4d">Barang dibeli di Hong Kong, dibawa pulang, lalu dikirim ke alamatmu.</span></li>
     </ol>
-  </section>
-
-  <section>
-    <div class="sec-head">
-      <span class="eyebrow">Bisa titip apa?</span>
-      <h2>Selain menu di atas</h2>
-      <hr class="rule">
-      <p>Cari sesuatu yang tidak ada di daftar? DM aja, nanti kami cek di Hong Kong.</p>
-    </div>
-    <div class="cats">
-      <span>Makeup & skincare</span><span>Parfum</span><span>Fashion & loungewear</span><span>Snack & oleh-oleh HK</span><span>Barang Taobao</span><span>Preloved pilihan</span>
-    </div>
   </section>
 
   <section id="hk">
     <div class="sec-head">
-      <span class="eyebrow">Dari Hong Kong</span>
+      <span class="eyebrow" data-i18n="hkEyebrow">Dari Hong Kong</span>
       <h2>HK Notes</h2>
       <hr class="rule">
-      <p>Catatan jalan-jalan dan makan selama belanja titipan kalian.</p>
+      <p data-i18n="hkLede">Catatan jalan-jalan dan makan selama belanja titipan kalian.</p>
     </div>
     <div class="notes">
       <article class="notecard">
-        <span class="tag">Date ideas · Pasta</span>
+        <span class="tag" data-i18n="hk1tag">Date ideas · Pasta</span>
         <h3>Nocino, Central</h3>
         <ul>
           <li>Wagyu Beef Tartare (must try!)</li>
@@ -243,9 +245,9 @@ footer .logo { color: var(--ink); }
         </ul>
       </article>
       <article class="notecard">
-        <span class="tag">HK eats · Dessert</span>
-        <h3>Top 3 Froyo di Hong Kong</h3>
-        <p>Tiga tempat froyo favorit, mana yang paling enak? Lihat versi lengkapnya di Instagram.</p>
+        <span class="tag" data-i18n="hk2tag">HK eats · Dessert</span>
+        <h3 data-i18n="hk2title">Top 3 Froyo di Hong Kong</h3>
+        <p data-i18n="hk2body">Tiga tempat froyo favorit, mana yang paling enak? Lihat versi lengkapnya di Instagram.</p>
       </article>
     </div>
   </section>
@@ -253,101 +255,192 @@ footer .logo { color: var(--ink); }
   <section id="faq">
     <div class="sec-head">
       <span class="eyebrow">FAQ</span>
-      <h2>Yang sering ditanya</h2>
+      <h2 data-i18n="faqTitle">Yang sering ditanya</h2>
       <hr class="rule">
     </div>
-    <div>
-      <details><summary>Barangnya pasti original?</summary><p>Ya. Semua barang dibeli langsung di toko resmi di Hong Kong, dan struk pembelian bisa dikirim kalau kamu minta.</p></details>
-      <details><summary>Kapan barang sampai?</summary><p>Batch Desember diperkirakan sampai Indonesia tanggal 4 Desember 2026. Setelah itu paket dikirim ke alamatmu lewat ekspedisi.</p></details>
-      <details><summary>Kenapa slotnya terbatas?</summary><p>Barang dibawa langsung di bagasi, jadi kapasitas tiap batch terbatas. Slot dikunci setelah pembayaran.</p></details>
-      <details><summary>Bisa titip barang yang tidak ada di daftar?</summary><p>Bisa. Kirim nama barang dan link/foto lewat DM, nanti kami cek ketersediaan dan harganya.</p></details>
-      <details><summary>Kalau barangnya habis?</summary><p>Kami kabari langsung dan uangmu dikembalikan penuh untuk item yang tidak berhasil dibeli.</p></details>
+    <div class="faq">
+      <details><summary data-i18n="q1">Barangnya pasti original?</summary><p data-i18n="a1">Ya. Semua barang dibeli langsung di toko resmi di Hong Kong.</p></details>
+      <details><summary data-i18n="q2">Kapan barang sampai?</summary><p data-i18n="a2">Batch Desember diperkirakan sampai Indonesia tanggal 4 Desember 2026, lalu dikirim ke alamatmu.</p></details>
+      <details><summary data-i18n="q3">Kenapa slotnya terbatas?</summary><p data-i18n="a3">Barang dibawa langsung di bagasi, jadi kapasitas tiap batch terbatas. Slot dikunci setelah pembayaran.</p></details>
+      <details><summary data-i18n="q4">Bisa titip barang yang tidak ada di katalog?</summary><p data-i18n="a4">Bisa. Kirim nama barang dan foto atau link lewat DM, nanti kami cek ketersediaan dan harganya.</p></details>
     </div>
   </section>
 
   <footer>
     <span class="logo">lovedbymae.</span>
-    <p>preloved &amp; jastip HK · by @mae.clarrence</p>
+    <p data-i18n="footer">preloved &amp; jastip HK · by @mae.clarrence</p>
     <div class="socials">
       <a href="https://www.instagram.com/lovedbymae._/" target="_blank" rel="noopener">Instagram @lovedbymae._</a>
       <a href="https://www.threads.com/@lovedbymae._" target="_blank" rel="noopener">Threads @lovedbymae._</a>
     </div>
   </footer>
 </div>
+<div class="toast" id="toast" hidden></div>
 
 <script>
-const ITEMS = [
-  { id: "ct-powder", brand: "Charlotte Tilbury · Airbrush Flawless", name: "Finish Powder", price: 650000, art: "compact" },
-  { id: "ct-spray", brand: "Charlotte Tilbury · Airbrush Flawless", name: "Setting Spray", price: 650000, art: "spray" },
-];
-const ART = {
-  compact: `<svg class="art" viewBox="0 0 96 96" aria-hidden="true"><circle cx="48" cy="48" r="40" fill="var(--line)"/><circle cx="48" cy="48" r="40" fill="none" stroke="var(--rose)" stroke-width="3"/><circle cx="48" cy="48" r="28" fill="var(--paper)" stroke="var(--rose)" stroke-width="1"/></svg>`,
-  spray: `<svg class="art" viewBox="0 0 96 96" aria-hidden="true"><rect x="30" y="26" width="36" height="62" rx="6" fill="var(--line)" stroke="var(--rose)" stroke-width="2"/><rect x="38" y="10" width="20" height="16" rx="3" fill="var(--cocoa)"/><path d="M48 44 l8 12 l-8 12 l-8 -12 z" fill="var(--hk)" opacity=".8"/></svg>`,
+const DM_URL = "https://ig.me/m/lovedbymae._";
+const T = {
+  id: {
+    navCatalog: "Katalog", navHow: "Cara Order", navFaq: "FAQ",
+    heroTitle: "Jastip <em>Hong Kong</em><br>ke Indonesia",
+    heroLede: "Jastip (jasa titip) artinya kami belanjakan barang incaranmu langsung di Hong Kong, bawa pulang, lalu kirim ke rumahmu.",
+    tagline: ["100% Original", "Beli langsung di Hong Kong"],
+    ctaCatalog: "Lihat katalog", ctaDm: "DM di Instagram",
+    batchEyebrow: "Batch berikutnya · Desember", dec: "Des",
+    cdFuture: d => `Barang sampai Indonesia sekitar 4 Desember 2026, ${d} hari lagi. Slot terbatas.`,
+    cdSoon: "Barang mendarat sebentar lagi. DM untuk batch berikutnya.",
+    cdPast: "Batch Desember sudah mendarat. DM untuk info batch berikutnya.",
+    catEyebrow: "Open PO", catTitle: "Katalog",
+    catLede: "Pilih ukuran dan shade, lalu tekan Order via DM. Detail pesananmu otomatis tersalin untuk ditempel di DM.",
+    searchPh: "Cari produk atau brand…", all: "Semua", allBrands: "Semua brand",
+    cats: { Makeup: "Makeup", Skincare: "Skincare", Haircare: "Perawatan Rambut", Health: "Kesehatan" },
+    count: n => `${n} produk`, none: "Produk tidak ditemukan. Coba kata lain, atau DM untuk request.",
+    loading: "Memuat katalog…", loadErr: "Katalog gagal dimuat. Muat ulang halaman ini.",
+    size: "Ukuran", shade: "Shade", noPhoto: "Foto segera",
+    order: "Order via DM",
+    msg: (p, v, s) => `Halo kak, aku mau order:\n${p.brand} – ${p.name}\nUkuran: ${v}${s ? `\nShade: ${s}` : ""}`,
+    copied: "Detail pesanan tersalin. Tempel di DM ya!", pickShade: "Pilih shade dulu ya.",
+    howEyebrow: "How to order", howTitle: "Cara Order",
+    s1t: "Pilih produk", s1d: "Cari di katalog, pilih ukuran dan shade.",
+    s2t: "DM pesananmu", s2d: "Kirim nama produk, ukuran, dan shade ke @lovedbymae._ lewat Instagram.",
+    s3t: "Bayar", s3d: "Kami konfirmasi stok dan total, lalu kamu transfer untuk kunci slot.",
+    s4t: "Dikirim", s4d: "Barang dibeli di Hong Kong, dibawa pulang, lalu dikirim ke alamatmu.",
+    hkEyebrow: "Dari Hong Kong", hkLede: "Catatan jalan-jalan dan makan selama belanja titipan kalian.",
+    hk1tag: "Date ideas · Pasta", hk2tag: "HK eats · Dessert", hk2title: "Top 3 Froyo di Hong Kong",
+    hk2body: "Tiga tempat froyo favorit, mana yang paling enak? Lihat versi lengkapnya di Instagram.",
+    faqTitle: "Yang sering ditanya",
+    q1: "Barangnya pasti original?", a1: "Ya. Semua barang dibeli langsung di toko resmi di Hong Kong.",
+    q2: "Kapan barang sampai?", a2: "Batch Desember diperkirakan sampai Indonesia tanggal 4 Desember 2026, lalu dikirim ke alamatmu.",
+    q3: "Kenapa slotnya terbatas?", a3: "Barang dibawa langsung di bagasi, jadi kapasitas tiap batch terbatas. Slot dikunci setelah pembayaran.",
+    q4: "Bisa titip barang yang tidak ada di katalog?", a4: "Bisa. Kirim nama barang dan foto atau link lewat DM, nanti kami cek ketersediaan dan harganya.",
+    footer: "preloved & jastip HK · by @mae.clarrence",
+    fix: s => s,
+  },
+  en: {
+    navCatalog: "Catalog", navHow: "How to Order", navFaq: "FAQ",
+    heroTitle: "Hong Kong <em>personal</em><br>shopping to Indonesia",
+    heroLede: "Jastip is a personal shopping service: we buy the items you want directly in Hong Kong, bring them home, and ship them to your door.",
+    tagline: ["100% Original", "Bought directly in Hong Kong"],
+    ctaCatalog: "Browse catalog", ctaDm: "DM on Instagram",
+    batchEyebrow: "Next batch · December", dec: "Dec",
+    cdFuture: d => `Items arrive in Indonesia around 4 December 2026, ${d} days to go. Limited slots.`,
+    cdSoon: "Items land very soon. DM us for the next batch.",
+    cdPast: "The December batch has landed. DM us about the next batch.",
+    catEyebrow: "Open pre-order", catTitle: "Catalog",
+    catLede: "Choose a size and shade, then tap Order via DM. Your order details are copied so you can paste them into the DM.",
+    searchPh: "Search products or brands…", all: "All", allBrands: "All brands",
+    cats: { Makeup: "Makeup", Skincare: "Skincare", Haircare: "Haircare", Health: "Health" },
+    count: n => `${n} product${n === 1 ? "" : "s"}`, none: "No products found. Try another word, or DM us with a request.",
+    loading: "Loading catalog…", loadErr: "The catalog didn't load. Reload this page.",
+    size: "Size", shade: "Shade", noPhoto: "Photo soon",
+    order: "Order via DM",
+    msg: (p, v, s) => `Hi! I'd like to order:\n${p.brand} – ${p.name}\nSize: ${v}${s ? `\nShade: ${s}` : ""}`,
+    copied: "Order details copied. Paste them into the DM!", pickShade: "Please choose a shade first.",
+    howEyebrow: "How it works", howTitle: "How to Order",
+    s1t: "Pick a product", s1d: "Find it in the catalog and choose the size and shade.",
+    s2t: "DM your order", s2d: "Send the product name, size, and shade to @lovedbymae._ on Instagram.",
+    s3t: "Pay", s3d: "We confirm stock and the total, then you transfer to lock your slot.",
+    s4t: "Shipped", s4d: "We buy it in Hong Kong, bring it home, and ship it to your address.",
+    hkEyebrow: "From Hong Kong", hkLede: "Notes on places to go and eat while shopping for your orders.",
+    hk1tag: "Date ideas · Pasta", hk2tag: "HK eats · Dessert", hk2title: "Top 3 Froyo in Hong Kong",
+    hk2body: "Our three favorite froyo spots. Which one is the best? See the full post on Instagram.",
+    faqTitle: "Frequently asked",
+    q1: "Are the products original?", a1: "Yes. Everything is bought directly from official stores in Hong Kong.",
+    q2: "When will my order arrive?", a2: "The December batch is expected in Indonesia on 4 December 2026, then shipped to your address.",
+    q3: "Why are slots limited?", a3: "Items travel in our luggage, so each batch has limited space. Your slot is locked once you pay.",
+    q4: "Can I request something not in the catalog?", a4: "Yes. DM us the item name with a photo or link, and we'll check availability and price.",
+    footer: "preloved & jastip HK · by @mae.clarrence",
+    fix: s => s.replace(/^isi (\d+)$/i, "$1 pcs").replace("(cek stok)", "(check stock)").replace(/ sachet$/, " sachets"),
+  },
 };
-const qty = Object.fromEntries(ITEMS.map(i => [i.id, 0]));
-const fmt = n => "IDR " + n.toLocaleString("id-ID");
-const grid = document.getElementById("items");
 
-grid.innerHTML = ITEMS.map(i => `
-  <article class="item">
-    ${ART[i.art]}
-    <span class="brand">${i.brand}</span>
-    <h3>${i.name}</h3>
-    <span class="price">${fmt(i.price).replace(",000", "K").replace(".000", "K")}</span>
-    <div class="qty">
-      <button type="button" data-id="${i.id}" data-d="-1" aria-label="Kurangi ${i.name}">−</button>
-      <output id="q-${i.id}">0</output>
-      <button type="button" data-id="${i.id}" data-d="1" aria-label="Tambah ${i.name}">+</button>
-    </div>
-  </article>`).join("") + `
-  <article class="item request">
-    <h3>Request item lain</h3>
-    <p>Tulis di pesan DM di bawah: nama barang, varian, dan jumlah.</p>
-  </article>`;
+let lang = "id";
+try { const s = localStorage.getItem("lbm-lang"); if (s === "en" || s === "id") lang = s; } catch {}
+if (location.hash === "#en") lang = "en";
 
-const msg = document.getElementById("msg");
-let edited = false;
-msg.addEventListener("input", () => { edited = true; });
+let DATA = null;
+const state = { cat: "all", brand: "all", q: "" };
+const pick = {}; // id -> { v: index, s: shade }
+const $ = id => document.getElementById(id);
+const rp = n => "Rp" + n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+const esc = s => String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 
-function render() {
-  let total = 0, lines = [];
-  for (const i of ITEMS) {
-    const q = qty[i.id];
-    document.getElementById("q-" + i.id).textContent = q;
-    if (q) { total += q * i.price; lines.push(`- ${i.name} (${i.brand.split(" · ")[0]}) x${q} = ${fmt(q * i.price)}`); }
-  }
-  document.getElementById("total").textContent = fmt(total);
-  if (!edited) {
-    msg.value = lines.length
-      ? `Halo kak, aku mau nitip batch Desember ya:\n${lines.join("\n")}\nTotal: ${fmt(total)}\n\nNama:\nKota pengiriman:`
-      : `Halo kak, aku mau nitip batch Desember ya:\n(pilih item di atas atau tulis request di sini)\n\nNama:\nKota pengiriman:`;
-  }
-}
-grid.addEventListener("click", e => {
-  const b = e.target.closest("button[data-id]");
-  if (!b) return;
-  qty[b.dataset.id] = Math.max(0, Math.min(10, qty[b.dataset.id] + Number(b.dataset.d)));
-  edited = false;
-  render();
-});
-
-document.getElementById("copy").addEventListener("click", () => {
-  const done = () => { const c = document.getElementById("copied"); c.hidden = false; setTimeout(() => c.hidden = true, 2500); };
-  try {
-    navigator.clipboard.writeText(msg.value).then(done, () => { msg.select(); done(); });
-  } catch { msg.select(); done(); }
-});
-
-(function countdown() {
-  const eta = new Date(2026, 11, 4);
-  const today = new Date(); today.setHours(0,0,0,0);
+function applyLang() {
+  const t = T[lang];
+  document.documentElement.lang = lang;
+  document.querySelectorAll("[data-i18n]").forEach(el => { const v = t[el.dataset.i18n]; if (typeof v === "string") el.textContent = v; });
+  document.querySelectorAll("[data-i18n-html]").forEach(el => { el.innerHTML = t[el.dataset.i18nHtml]; });
+  document.querySelectorAll("[data-i18n-ph]").forEach(el => { el.placeholder = t[el.dataset.i18nPh]; });
+  document.querySelectorAll(".lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.lang === lang));
+  $("tagline").innerHTML = t.tagline.map(x => `<span>${esc(x)}</span>`).join("");
+  const eta = new Date(2026, 11, 4), today = new Date(); today.setHours(0, 0, 0, 0);
   const days = Math.round((eta - today) / 86400000);
-  const el = document.getElementById("countdown");
-  if (days > 1) el.textContent = `Barang sampai Indonesia sekitar 4 Desember 2026, ${days} hari lagi. Slot terbatas.`;
-  else if (days >= 0) el.textContent = "Barang mendarat sebentar lagi. DM untuk batch berikutnya.";
-  else el.textContent = "Batch Desember sudah mendarat. DM untuk info batch berikutnya.";
-})();
-render();
-</script>
+  $("countdown").textContent = days > 1 ? t.cdFuture(days) : days >= 0 ? t.cdSoon : t.cdPast;
+  if (DATA) { renderTabs(); renderGrid(); }
+}
 
+function renderTabs() {
+  const t = T[lang];
+  const cats = [...new Set(DATA.products.map(p => p.category))];
+  $("catTabs").innerHTML = [["all", t.all], ...cats.map(c => [c, t.cats[c] || c])]
+    .map(([v, l]) => `<button type="button" class="tab" data-cat="${esc(v)}" aria-pressed="${state.cat === v}">${esc(l)}</button>`).join("");
+  const pool = DATA.products.filter(p => state.cat === "all" || p.category === state.cat);
+  const brands = [...new Set(pool.map(p => p.brand))].sort((a, b) => a.localeCompare(b));
+  if (state.brand !== "all" && !brands.includes(state.brand)) state.brand = "all";
+  $("brandTabs").innerHTML = [["all", t.allBrands], ...brands.map(b => [b, b])]
+    .map(([v, l]) => `<button type="button" class="tab" data-brand="${esc(v)}" aria-pressed="${state.brand === v}">${esc(l)}</button>`).join("");
+}
+
+function card(p) {
+  const t = T[lang], sel = pick[p.id] || (pick[p.id] = { v: 0, s: null });
+  const photo = p.image
+    ? `<div class="photo"><img src="${esc(p.image)}" alt="${esc(p.brand + " " + p.name)}" loading="lazy" width="400" height="400"></div>`
+    : `<div class="photo empty">${esc(t.noPhoto)}</div>`;
+  const multi = p.variants.length > 1;
+  const sizes = p.variants.map((v, i) => `<button type="button" class="size${multi ? "" : " single"}" data-id="${esc(p.id)}" data-v="${i}" aria-pressed="${multi ? sel.v === i : "true"}"${multi ? "" : " tabindex=\"-1\""}><span>${esc(t.fix(v.size))}</span><span class="price">${rp(v.price_idr)}</span></button>`).join("");
+  const shades = p.available_shades.length
+    ? `<span class="label">${esc(t.shade)}</span><div class="chips">${p.available_shades.map(s => `<button type="button" class="chip" data-id="${esc(p.id)}" data-s="${esc(s)}" aria-pressed="${sel.s === s}">${esc(t.fix(s))}</button>`).join("")}</div>` : "";
+  return `<article class="card">${photo}<span class="brand">${esc(p.brand)}</span><h3>${esc(p.name)}</h3>
+    <div class="opts"><span class="label">${esc(t.size)}</span><div class="sizes">${sizes}</div>${shades}</div>
+    <a class="btn solid order-btn" href="${DM_URL}" target="_blank" rel="noopener" data-order="${esc(p.id)}">${esc(t.order)}</a></article>`;
+}
+
+function renderGrid() {
+  const t = T[lang], q = state.q.trim().toLowerCase();
+  const list = DATA.products.filter(p =>
+    (state.cat === "all" || p.category === state.cat) &&
+    (state.brand === "all" || p.brand === state.brand) &&
+    (!q || (p.brand + " " + p.name + " " + p.category).toLowerCase().includes(q)));
+  $("count").textContent = t.count(list.length);
+  $("grid").innerHTML = list.length ? list.map(card).join("") : `<p class="empty-state">${esc(t.none)}</p>`;
+}
+
+let toastTimer;
+function toast(msg) { const el = $("toast"); el.textContent = msg; el.hidden = false; clearTimeout(toastTimer); toastTimer = setTimeout(() => el.hidden = true, 3200); }
+
+document.addEventListener("click", e => {
+  const lb = e.target.closest(".lang button");
+  if (lb) { lang = lb.dataset.lang; try { localStorage.setItem("lbm-lang", lang); } catch {} applyLang(); return; }
+  const ct = e.target.closest("[data-cat]"); if (ct) { state.cat = ct.dataset.cat; renderTabs(); renderGrid(); return; }
+  const bt = e.target.closest("[data-brand]"); if (bt) { state.brand = bt.dataset.brand; renderTabs(); renderGrid(); return; }
+  const sz = e.target.closest(".size[data-v]"); if (sz && !sz.classList.contains("single")) { pick[sz.dataset.id].v = +sz.dataset.v; renderGrid(); return; }
+  const ch = e.target.closest(".chip[data-s]"); if (ch) { const p = pick[ch.dataset.id]; p.s = p.s === ch.dataset.s ? null : ch.dataset.s; renderGrid(); return; }
+  const ob = e.target.closest("[data-order]");
+  if (ob) {
+    const p = DATA.products.find(x => x.id === ob.dataset.order), sel = pick[p.id], t = T[lang];
+    if (p.available_shades.length > 1 && !sel.s) { e.preventDefault(); toast(t.pickShade); return; }
+    const shade = sel.s || p.available_shades[0] || null;
+    const text = t.msg(p, t.fix(p.variants[sel.v].size) + " · " + rp(p.variants[sel.v].price_idr), shade ? t.fix(shade) : null);
+    try { navigator.clipboard.writeText(text).then(() => toast(t.copied), () => {}); } catch {}
+  }
+});
+$("q").addEventListener("input", e => { state.q = e.target.value; renderGrid(); });
+
+applyLang();
+fetch("catalog.json", { cache: "no-cache" })
+  .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+  .then(d => { DATA = d; renderTabs(); renderGrid(); })
+  .catch(() => { $("grid").innerHTML = `<p class="empty-state">${esc(T[lang].loadErr)}</p>`; });
+</script>
+</body>
 </html>

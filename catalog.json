@@ -1,0 +1,659 @@
+{
+    "store":  {
+                  "name":  "@lovedbymae._",
+                  "type":  "Jastip Hong Kong",
+                  "tagline":  "100% Original · Beli langsung di Hong Kong",
+                  "order_method":  "DM Instagram @lovedbymae._"
+              },
+    "products":  [
+                     {
+                         "id":  "ct-airbrush-powder",
+                         "brand":  "Charlotte Tilbury",
+                         "name":  "Airbrush Flawless Finish Powder",
+                         "category":  "Makeup",
+                         "image":  "images/ct-airbrush-powder.jpg",
+                         "variants":  [
+                                          {
+                                              "size":  "8g",
+                                              "price_idr":  650000
+                                          }
+                                      ],
+                         "available_shades":  [
+
+                                              ]
+                     },
+                     {
+                         "id":  "ct-setting-spray",
+                         "brand":  "Charlotte Tilbury",
+                         "name":  "Airbrush Flawless Setting Spray",
+                         "category":  "Makeup",
+                         "image":  "images/ct-setting-spray.jpg",
+                         "variants":  [
+                                          {
+                                              "size":  "100ml",
+                                              "price_idr":  650000
+                                          }
+                                      ],
+                         "available_shades":  [
+
+                                              ]
+                     },
+                     {
+                         "id":  "nars-setting-powder",
+                         "brand":  "NARS",
+                         "name":  "Light Reflecting Setting Powder (Pressed)",
+                         "category":  "Makeup",
+                         "image":  "images/nars-setting-powder.jpg",
+                         "variants":  [
+                                          {
+                                              "size":  "10g",
+                                              "price_idr":  590000
+                                          }
+                                      ],
+                         "available_shades":  [
+                                                  "Crystal"
+                                              ]
+                     },
+                     {
+                         "id":  "nars-foundation",
+                         "brand":  "NARS",
+                         "name":  "Light Reflecting Foundation",
+                         "category":  "Makeup",
+                         "image":  "images/nars-foundation.jpg",
+                         "variants":  [
+                                          {
+                                              "size":  "30ml",
+                                              "price_idr":  900000
+                                          }
+                                      ],
+                         "available_shades":  [
+                                                  "Light 0 Siberia",
+                                                  "Light 1 Oslo",
+                                                  "Light 1.5 Yulong",
+                                                  "Light 2 Mont Blanc"
+                                              ]
+                     },
+                     {
+                         "id":  "ysl-the-slim",
+                         "brand":  "YSL",
+                         "name":  "The Slim Matte Lipstick",
+                         "category":  "Makeup",
+                         "image":  "images/ysl-the-slim.jpg",
+                         "variants":  [
+                                          {
+                                              "size":  "2.2g",
+                                              "price_idr":  720000
+                                          }
+                                      ],
+                         "available_shades":  [
+                                                  "314",
+                                                  "23",
+                                                  "25",
+                                                  "28",
+                                                  "35",
+                                                  "1966",
+                                                  "1977",
+                                                  "1988"
+                                              ]
+                     },
+                     {
+                         "id":  "ysl-the-inks",
+                         "brand":  "YSL",
+                         "name":  "The Inks Vinyl Cream",
+                         "category":  "Makeup",
+                         "image":  "images/ysl-the-inks.jpg",
+                         "variants":  [
+                                          {
+                                              "size":  "5.5ml",
+                                              "price_idr":  600000
+                                          }
+                                      ],
+                         "available_shades":  [
+                                                  "610"
+                                              ]
+                     },
+                     {
+                         "id":  "dior-lip-glow",
+                         "brand":  "Dior",
+                         "name":  "Dior Addict Lip Glow",
+                         "category":  "Makeup",
+                         "image":  "images/dior-lip-glow.jpg",
+                         "variants":  [
+                                          {
+                                              "size":  "3.2g",
+                                              "price_idr":  642000
+                                          }
+                                      ],
+                         "available_shades":  [
+
+                                              ]
+                     },
+                     {
+                         "id":  "cdp-radiant-cream-foundation",
+                         "brand":  "Clé de Peau Beauté",
+                         "name":  "Radiant Cream Foundation SPF25",
+                         "category":  "Makeup",
+                         "image":  "images/cdp-radiant-cream-foundation.jpg",
+                         "variants":  [
+                                          {
+                                              "size":  "21ml",
+                                              "price_idr":  1758000
+                                          }
+                                      ],
+                         "available_shades":  [
+                                                  "O10 – I10 (cek stok)"
+                                              ]
+                     },
+                     {
+                         "id":  "cdp-brightening-veil",
+                         "brand":  "Clé de Peau Beauté",
+                         "name":  "Brightening Enhancer Veil",
+                         "category":  "Makeup",
+                         "image":  "images/cdp-brightening-veil.jpg",
+                         "variants":  [
+                                          {
+                                              "size":  "30ml",
+                                              "price_idr":  796000
+                                          }
+                                      ],
+                         "available_shades":  [
+
+                                              ]
+                     },
+                     {
+                         "id":  "cdp-mattifying-veil",
+                         "brand":  "Clé de Peau Beauté",
+                         "name":  "Pore-Refining Mattifying Veil SPF25",
+                         "category":  "Makeup",
+                         "image":  "images/cdp-mattifying-veil.jpg",
+                         "variants":  [
+                                          {
+                                              "size":  "38ml",
+                                              "price_idr":  796000
+                                          }
+                                      ],
+                         "available_shades":  [
+
+                                              ]
+                     },
+                     {
+                         "id":  "cdp-correcting-veil",
+                         "brand":  "Clé de Peau Beauté",
+                         "name":  "Correcting Cream Veil SPF25",
+                         "category":  "Makeup",
+                         "image":  "images/cdp-correcting-veil.jpg",
+                         "variants":  [
+                                          {
+                                              "size":  "37ml",
+                                              "price_idr":  626000
+                                          }
+                                      ],
+                         "available_shades":  [
+
+                                              ]
+                     },
+                     {
+                         "id":  "el-double-wear",
+                         "brand":  "Estée Lauder",
+                         "name":  "Double Wear Stay-in-Place Foundation",
+                         "category":  "Makeup",
+                         "image":  "images/el-double-wear.jpg",
+                         "variants":  [
+                                          {
+                                              "size":  "30ml",
+                                              "price_idr":  748000
+                                          }
+                                      ],
+                         "available_shades":  [
+                                                  "0N1 Alabaster",
+                                                  "1C0 Shell",
+                                                  "1C1 Cool Bone",
+                                                  "1N0 Porcelain",
+                                                  "1N1 Ivory Nude",
+                                                  "1W1 Bone",
+                                                  "1W2 Sand",
+                                                  "2C0 Cool Vanilla",
+                                                  "2W0 Warm Vanilla"
+                                              ]
+                     },
+                     {
+                         "id":  "ct-airbrush-foundation",
+                         "brand":  "Charlotte Tilbury",
+                         "name":  "Airbrush Flawless Foundation",
+                         "category":  "Makeup",
+                         "image":  "images/ct-airbrush-foundation.jpg",
+                         "variants":  [
+                                          {
+                                              "size":  "30ml",
+                                              "price_idr":  935000
+                                          }
+                                      ],
+                         "available_shades":  [
+                                                  "1 Neutral",
+                                                  "2 Neutral",
+                                                  "1 Cool",
+                                                  "2 Cool"
+                                              ]
+                     },
+                     {
+                         "id":  "ct-pillow-talk-cushion",
+                         "brand":  "Charlotte Tilbury",
+                         "name":  "Pillow Talk Beautifying Cushion Foundation",
+                         "category":  "Makeup",
+                         "image":  "images/ct-pillow-talk-cushion.jpg",
+                         "variants":  [
+                                          {
+                                              "size":  "12g",
+                                              "price_idr":  935000
+                                          }
+                                      ],
+                         "available_shades":  [
+                                                  "1C",
+                                                  "2C"
+                                              ]
+                     },
+                     {
+                         "id":  "ysl-glow-pact-cushion",
+                         "brand":  "YSL",
+                         "name":  "Touche Éclat Glow-Pact Cushion SPF50",
+                         "category":  "Makeup",
+                         "image":  "images/ysl-glow-pact-cushion.jpg",
+                         "variants":  [
+                                          {
+                                              "size":  "Full size",
+                                              "price_idr":  737000
+                                          }
+                                      ],
+                         "available_shades":  [
+                                                  "B10",
+                                                  "B20"
+                                              ]
+                     },
+                     {
+                         "id":  "ysl-encre-de-peau-cushion",
+                         "brand":  "YSL",
+                         "name":  "Le Cushion Encre de Peau",
+                         "category":  "Makeup",
+                         "image":  "images/ysl-encre-de-peau-cushion.jpg",
+                         "variants":  [
+                                          {
+                                              "size":  "Full size",
+                                              "price_idr":  899000
+                                          }
+                                      ],
+                         "available_shades":  [
+                                                  "10",
+                                                  "20"
+                                              ]
+                     },
+                     {
+                         "id":  "fresh-rose-mask",
+                         "brand":  "Fresh",
+                         "name":  "Rose Face Mask",
+                         "category":  "Skincare",
+                         "image":  "images/fresh-rose-mask.jpg",
+                         "variants":  [
+                                          {
+                                              "size":  "100ml",
+                                              "price_idr":  581000
+                                          }
+                                      ],
+                         "available_shades":  [
+
+                                              ]
+                     },
+                     {
+                         "id":  "fresh-umbrian-clay",
+                         "brand":  "Fresh",
+                         "name":  "Umbrian Clay Purifying Mask",
+                         "category":  "Skincare",
+                         "image":  "images/fresh-umbrian-clay.jpg",
+                         "variants":  [
+                                          {
+                                              "size":  "100ml",
+                                              "price_idr":  698000
+                                          }
+                                      ],
+                         "available_shades":  [
+
+                                              ]
+                     },
+                     {
+                         "id":  "fresh-lotus-rescue-mask",
+                         "brand":  "Fresh",
+                         "name":  "Lotus Youth Preserve Rescue Mask",
+                         "category":  "Skincare",
+                         "image":  "images/fresh-lotus-rescue-mask.jpg",
+                         "variants":  [
+                                          {
+                                              "size":  "100ml",
+                                              "price_idr":  748000
+                                          }
+                                      ],
+                         "available_shades":  [
+
+                                              ]
+                     },
+                     {
+                         "id":  "fresh-black-tea-cream",
+                         "brand":  "Fresh",
+                         "name":  "Black Tea Advanced Age Renewal Cream",
+                         "category":  "Skincare",
+                         "image":  "images/fresh-black-tea-cream.jpg",
+                         "variants":  [
+                                          {
+                                              "size":  "50ml",
+                                              "price_idr":  1159000
+                                          }
+                                      ],
+                         "available_shades":  [
+
+                                              ]
+                     },
+                     {
+                         "id":  "fresh-rose-toner",
+                         "brand":  "Fresh",
+                         "name":  "Rose Deep Hydration Facial Toner",
+                         "category":  "Skincare",
+                         "image":  "images/fresh-rose-toner.jpg",
+                         "variants":  [
+                                          {
+                                              "size":  "250ml",
+                                              "price_idr":  469000
+                                          },
+                                          {
+                                              "size":  "400ml",
+                                              "price_idr":  782000
+                                          }
+                                      ],
+                         "available_shades":  [
+
+                                              ]
+                     },
+                     {
+                         "id":  "fresh-rose-mist",
+                         "brand":  "Fresh",
+                         "name":  "Rose Instant Hydration Mist",
+                         "category":  "Skincare",
+                         "image":  "images/fresh-rose-mist.jpg",
+                         "variants":  [
+                                          {
+                                              "size":  "100ml",
+                                              "price_idr":  363000
+                                          }
+                                      ],
+                         "available_shades":  [
+
+                                              ]
+                     },
+                     {
+                         "id":  "fresh-kombucha-essence",
+                         "brand":  "Fresh",
+                         "name":  "Kombucha Facial Treatment Essence",
+                         "category":  "Skincare",
+                         "image":  "images/fresh-kombucha-essence.jpg",
+                         "variants":  [
+                                          {
+                                              "size":  "250ml",
+                                              "price_idr":  1507000
+                                          }
+                                      ],
+                         "available_shades":  [
+
+                                              ]
+                     },
+                     {
+                         "id":  "fresh-soy-cleanser",
+                         "brand":  "Fresh",
+                         "name":  "Soy Face Cleanser",
+                         "category":  "Skincare",
+                         "image":  "images/fresh-soy-cleanser.jpg",
+                         "variants":  [
+                                          {
+                                              "size":  "150ml",
+                                              "price_idr":  405000
+                                          },
+                                          {
+                                              "size":  "400ml",
+                                              "price_idr":  1019000
+                                          }
+                                      ],
+                         "available_shades":  [
+
+                                              ]
+                     },
+                     {
+                         "id":  "ker-chronologiste-shampoo",
+                         "brand":  "Kérastase",
+                         "name":  "Chronologiste Bain Régénérant",
+                         "category":  "Haircare",
+                         "image":  "images/ker-chronologiste-shampoo.jpg",
+                         "variants":  [
+                                          {
+                                              "size":  "80ml",
+                                              "price_idr":  118000
+                                          },
+                                          {
+                                              "size":  "250ml",
+                                              "price_idr":  525000
+                                          }
+                                      ],
+                         "available_shades":  [
+
+                                              ]
+                     },
+                     {
+                         "id":  "ker-densifique-shampoo",
+                         "brand":  "Kérastase",
+                         "name":  "Densifique Bain Densité",
+                         "category":  "Haircare",
+                         "image":  "images/ker-densifique-shampoo.jpg",
+                         "variants":  [
+                                          {
+                                              "size":  "250ml",
+                                              "price_idr":  553000
+                                          },
+                                          {
+                                              "size":  "500ml",
+                                              "price_idr":  972000
+                                          }
+                                      ],
+                         "available_shades":  [
+
+                                              ]
+                     },
+                     {
+                         "id":  "ker-discipline-shampoo",
+                         "brand":  "Kérastase",
+                         "name":  "Discipline Bain Fluidéaliste",
+                         "category":  "Haircare",
+                         "image":  "images/ker-discipline-shampoo.jpg",
+                         "variants":  [
+                                          {
+                                              "size":  "250ml",
+                                              "price_idr":  472000
+                                          }
+                                      ],
+                         "available_shades":  [
+
+                                              ]
+                     },
+                     {
+                         "id":  "ker-specifique-divalent",
+                         "brand":  "Kérastase",
+                         "name":  "Specifique Bain Divalent",
+                         "category":  "Haircare",
+                         "image":  "images/ker-specifique-divalent.jpg",
+                         "variants":  [
+                                          {
+                                              "size":  "500ml",
+                                              "price_idr":  944000
+                                          }
+                                      ],
+                         "available_shades":  [
+
+                                              ]
+                     },
+                     {
+                         "id":  "ker-chronologiste-masque",
+                         "brand":  "Kérastase",
+                         "name":  "Chronologiste Masque Intense Régénérant",
+                         "category":  "Haircare",
+                         "image":  "images/ker-chronologiste-masque.jpg",
+                         "variants":  [
+                                          {
+                                              "size":  "200ml",
+                                              "price_idr":  907000
+                                          }
+                                      ],
+                         "available_shades":  [
+
+                                              ]
+                     },
+                     {
+                         "id":  "ker-genesis-serum",
+                         "brand":  "Kérastase",
+                         "name":  "Genesis Anti Hair-Fall Fortifying Serum",
+                         "category":  "Haircare",
+                         "image":  "images/ker-genesis-serum.jpg",
+                         "variants":  [
+                                          {
+                                              "size":  "90ml",
+                                              "price_idr":  860000
+                                          }
+                                      ],
+                         "available_shades":  [
+
+                                              ]
+                     },
+                     {
+                         "id":  "ker-potentialiste-serum",
+                         "brand":  "Kérastase",
+                         "name":  "Specifique Potentialiste Serum",
+                         "category":  "Haircare",
+                         "image":  "images/ker-potentialiste-serum.jpg",
+                         "variants":  [
+                                          {
+                                              "size":  "90ml",
+                                              "price_idr":  916000
+                                          }
+                                      ],
+                         "available_shades":  [
+
+                                              ]
+                     },
+                     {
+                         "id":  "ker-cicagloss-oil",
+                         "brand":  "Kérastase",
+                         "name":  "Blond Absolu L\u0027Huile Cicagloss",
+                         "category":  "Haircare",
+                         "image":  "images/ker-cicagloss-oil.jpg",
+                         "variants":  [
+                                          {
+                                              "size":  "75ml",
+                                              "price_idr":  810000
+                                          }
+                                      ],
+                         "available_shades":  [
+
+                                              ]
+                     },
+                     {
+                         "id":  "ker-gloss-absolu-trio",
+                         "brand":  "Kérastase",
+                         "name":  "Gloss Absolu Trio Set (Shampoo + Insta Glaze + Glaze Drops)",
+                         "category":  "Haircare",
+                         "image":  "images/ker-gloss-absolu-trio.jpg",
+                         "variants":  [
+                                          {
+                                              "size":  "Set 3 pcs",
+                                              "price_idr":  1731000
+                                          }
+                                      ],
+                         "available_shades":  [
+
+                                              ]
+                     },
+                     {
+                         "id":  "ker-gloss-absolu-duo",
+                         "brand":  "Kérastase",
+                         "name":  "Gloss Absolu Bain Hydra-Glaze + Refill",
+                         "category":  "Haircare",
+                         "image":  "images/ker-gloss-absolu-duo.jpg",
+                         "variants":  [
+                                          {
+                                              "size":  "500ml + refill 500ml",
+                                              "price_idr":  1452000
+                                          }
+                                      ],
+                         "available_shades":  [
+
+                                              ]
+                     },
+                     {
+                         "id":  "ninjiom-original",
+                         "brand":  "Nin Jiom",
+                         "name":  "Pei Pa Koa Convenient Pack (Original)",
+                         "category":  "Health",
+                         "image":  "images/ninjiom-original.jpg",
+                         "variants":  [
+                                          {
+                                              "size":  "15ml x 10 sachet",
+                                              "price_idr":  110000
+                                          }
+                                      ],
+                         "available_shades":  [
+
+                                              ]
+                     },
+                     {
+                         "id":  "ninjiom-no-sugar",
+                         "brand":  "Nin Jiom",
+                         "name":  "Pei Pa Koa Convenient Pack (No Sugar Added)",
+                         "category":  "Health",
+                         "image":  "images/ninjiom-no-sugar.jpg",
+                         "variants":  [
+                                          {
+                                              "size":  "15ml x 10 sachet",
+                                              "price_idr":  150000
+                                          }
+                                      ],
+                         "available_shades":  [
+
+                                              ]
+                     },
+                     {
+                         "id":  "tiger-balm-plaster",
+                         "brand":  "Tiger Balm",
+                         "name":  "Plaster Warm / Cool",
+                         "category":  "Health",
+                         "image":  "images/tiger-balm-plaster.jpg",
+                         "variants":  [
+                                          {
+                                              "size":  "isi 9",
+                                              "price_idr":  130000
+                                          }
+                                      ],
+                         "available_shades":  [
+                                                  "Warm",
+                                                  "Cool"
+                                              ]
+                     },
+                     {
+                         "id":  "counterpain-cream",
+                         "brand":  "Counterpain",
+                         "name":  "Analgesic Cream",
+                         "category":  "Health",
+                         "image":  "images/counterpain-cream.jpg",
+                         "variants":  [
+                                          {
+                                              "size":  "120g",
+                                              "price_idr":  135000
+                                          }
+                                      ],
+                         "available_shades":  [
+
+                                              ]
+                     }
+                 ]
+}
